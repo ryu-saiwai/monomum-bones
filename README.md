@@ -4,7 +4,7 @@ This wordpress theme that based bones theme (http://themble.com/bones/) is for m
 a few custmize for design.add ajax interface.
 since : bones 1.7
 
-http://monomum.com/monomum/
+http://monomum.com/
 
 Author: ryu saiwai
 
@@ -18,3 +18,7 @@ For more information, please visit:
 http://themble.com/bones/
 
 Author: Eddie Machado
+
+
+##Changelog
+

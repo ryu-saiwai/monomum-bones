@@ -11,6 +11,9 @@ sidebars, comments, ect.
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
+// LOAD BONES CORE (if you remove this, the theme will break)
+require_once( 'library/mmbones.php' );
+
 // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
 require_once( 'library/custom-post-type.php' );
 

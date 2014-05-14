@@ -74,7 +74,8 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family:"Century","Century Schoolbook","Old Standard TT",'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3','Meiryo', 'メイリオ',sans-serif;
+  color:#19283c;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -520,11 +521,18 @@ p {
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
+
+  /*
+   edit ryu-saiwai via http://daily.glocalism.jp/memo/bones-masu/
+  */
+  /*
   -webkit-font-feature-settings: "liga", "dlig";
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
+  font-feature-settings: "liga", "dlig";
+  */
+}
 
 /******************************************************************
 Site Name:
@@ -1242,10 +1250,10 @@ GENERAL STYLES
 *********************/
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  /*background-color: #eaedf2;*/
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1298,12 +1306,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #000000;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #666666; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1352,12 +1360,12 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
+  background-color: #fff; }
 
 #logo {
   margin: 0.75em 0; }
   #logo a {
-    color: white; }
+    color: #000000; }
 
 /*********************
 NAVIGATION STYLES
@@ -1409,12 +1417,13 @@ POSTS & CONTENT STYLES
   background-color: white;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #cccccc; }
+  /*border: 1px solid #cccccc; */
+}
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
+    padding: 1.5em 0; }
   .hentry footer {
-    padding: 1.5em;
+    padding: 1.5em 0;
     border-top: 1px solid #f8f9fa; }
     .hentry footer p {
       margin: 0; }
@@ -1442,7 +1451,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  padding: 1.5em 1.5em 0;
+  padding: 1.5em 0;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1729,8 +1738,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: #fff;
+  color: #000000; }
 
 /*
 if you checked out the link above:
@@ -1752,18 +1761,18 @@ tweeners.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: 481px and Up Stylesheet
-  
+
   This stylesheet is loaded for larger devices. It's set to
   481px because at 480px it would load on a landscaped iPhone.
   This isn't ideal because then you would be loading all those
   extra styles on that same mobile connection.
-  
+
   A word of warning. This size COULD be a larger mobile device,
   so you still want to keep it pretty light and simply expand
   upon your base.scss styles.
-  
+
   ******************************************************************/
   /*
   IMPORTANT NOTE ABOUT SASS 3.3 & UP
@@ -1831,15 +1840,15 @@ you can add resource intensive styles.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Tablet & Small Desktop Stylesheet
-  
+
   Here's where you can start getting into the good stuff.
   This size will work on iPads, other tablets, and desktops.
   So you can start working with more styles, background images,
   and other resources. You'll also notice the grid starts to
   come into play. Have fun!
-  
+
   ******************************************************************/
   /*********************
   GENERAL STYLES
@@ -1919,7 +1928,7 @@ you can add resource intensive styles.
     margin-top: 2.2em; }
 
   .widgettitle {
-    border-bottom: 2px solid #444;
+    border-bottom: 1px solid #f8f9fa;
     margin-bottom: 0.75em; }
 
   .widget {
@@ -1969,12 +1978,12 @@ you can add resource intensive styles.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Desktop Stylsheet
-  
+
   This is the desktop size. It's larger than an iPad so it will only
   be seen on the Desktop.
-  
+
   ******************************************************************/
   .wrap {
     width: 1040px; } }
@@ -1984,14 +1993,14 @@ This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
+  Site Name:
+  Author:
+
   Stylesheet: Super Large Monitor Stylesheet
-  
+
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
-  
+
   ******************************************************************/ }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
@@ -2001,44 +2010,44 @@ query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
+  Site Name:
+  Author:
+
   Stylesheet: Retina Screens & Devices Stylesheet
-  
+
   When handling retina screens you need to make adjustments, especially
   if you're not using font icons. Here you can add them in one neat
   place.
-  
+
   ******************************************************************/
-  /* 
-  
-  EXAMPLE 
+  /*
+
+  EXAMPLE
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
   like this:
-  
+
   .icon {
   	width: 24px;
   	height: 24px;
   	background: url(img/test.png) no-repeat;
   }
-  
+
   For retina screens, we have to make some adjustments, so that image
   doesn't look blurry. So, taking into account the image above and the
   dimensions, this is what we would put in our retina stylesheet:
-  
+
   .icon {
   	background: url(img/test@2x.png) no-repeat;
   	background-size: 24px 24px;
   }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
+
+  So, you would create the same icon, but at double the resolution, meaning
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
+  the original dimensions and you are good to go.
+
   */ }
 /*********************
 PRINT STYLESHEET
@@ -2050,13 +2059,13 @@ be set to display none.
   /******************************************************************
   Site Name:
   Author:
-  
+
   Stylesheet: Print Stylesheet
-  
+
   This is the print stylesheet. There's probably not a lot
   of reasons to edit this stylesheet. If you want to
   though, go for it.
-  
+
   ******************************************************************/
   * {
     background: transparent !important;
