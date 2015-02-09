@@ -1,7 +1,7 @@
 <?php
 /*
 Author: Eddie Machado
-URL: htp://themble.com/bones/
+URL: http://themble.com/bones/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -11,11 +11,9 @@ sidebars, comments, ect.
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
-// LOAD BONES CORE (if you remove this, the theme will break)
+// LOAD MM-BONES CORE
 require_once( 'library/mmbones.php' );
 
-// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-require_once( 'library/custom-post-type.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
@@ -27,8 +25,14 @@ Let's get everything up and running.
 
 function bones_ahoy() {
 
+  //Allow editor style.
+  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
+
   // let's get language support going, if you need it
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
+
+  // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
+  require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -202,12 +206,16 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-  wp_enqueue_style( 'googleFonts');
+  wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
-add_action('wp_print_styles', 'bones_fonts');
+add_action('wp_enqueue_scripts', 'bones_fonts');
 
-
+// Enable support for HTML5 markup.
+  add_theme_support( 'html5', array(
+    'comment-list',
+    'search-form',
+    'comment-form'
+  ) );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

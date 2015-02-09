@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -12,7 +12,7 @@
 								/*
 								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
 								 *
-								 * So this function will bting in the needed template file depending on what the post
+								 * So this function will bring in the needed template file depending on what the post
 								 * format is. The different post formats are located in the post-formats folder.
 								 *
 								 *
@@ -43,7 +43,7 @@
 
 						<?php endif; ?>
 
-					</div>
+					</main>
 
 					<?php get_sidebar(); ?>
 
